@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.vercel/
+check-output/
+.env*
+
+.vercel
+.env*

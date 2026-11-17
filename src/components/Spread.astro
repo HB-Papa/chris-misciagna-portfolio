@@ -1,0 +1,28 @@
+---
+import type { Project } from '../data/site';
+
+interface Props { project: Project }
+const { project: p } = Astro.props;
+const headingId = `${p.id}-title`;
+---
+<article class:list={['spread', `c-${p.color}`]} id={p.id} aria-labelledby={headingId}>
+  <div class="left">
+    <h2 id={headingId}>{p.title}</h2>
+    <dl class="facts">
+      {p.facts.map(([label, value]) => (<div><dt>{label}</dt><dd>{value}</dd></div>))}
+    </dl>
+  </div>
+  <div class="right">
+    <p class="status-line">{p.status}</p>
+    {p.sections.map((s) => (<><h3>{s.heading}</h3><p>{s.body}</p></>))}
+    {p.quote && (
+      <figure class="said">
+        <blockquote><p>“{p.quote.text}”</p></blockquote>
+        <figcaption>{p.quote.source}</figcaption>
+      </figure>
+    )}
+    {p.links.length > 0 && (
+      <p class="links">{p.links.map((l) => <a class="go" href={l.href}>{l.label}</a>)}</p>
+    )}
+  </div>
+</article>

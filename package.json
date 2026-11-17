@@ -1,0 +1,25 @@
+{
+  "name": "chris-misciagna-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chris Misciagna's portfolio: academic librarianship, open access, scholarly communication.",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "5.3.0",
+    "@fontsource-variable/source-serif-4": "5.3.1",
+    "astro": "7.4.7"
+  },
+  "devDependencies": {
+    "axe-core": "4.14.0",
+    "puppeteer-core": "24.10.0"
+  }
+}

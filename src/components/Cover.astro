@@ -1,0 +1,24 @@
+---
+import type { Project } from '../data/site';
+import { coverArt } from '../lib/art';
+
+interface Props { project: Project; open?: boolean }
+const { project: p, open = false } = Astro.props;
+const art = coverArt(p.art);
+---
+<li class:list={['cover', `c-${p.color}`, { on: open }]}>
+  <a class="face" href={`#${p.id}`}>
+    <span class="num">
+      <span>{p.callNumber}</span>{' '}
+      <span>{p.tag}</span>
+    </span>{' '}
+    <span class:list={['title', { long: p.long }]}>{p.title}<span class="visually-hidden">.</span></span>{' '}
+    <span class="art" aria-hidden="true">
+      <svg viewBox={art.viewBox} preserveAspectRatio="xMidYMid meet" focusable="false" set:html={art.body} />
+    </span>
+    <span class="foot">
+      <span class="blurb">{p.blurb}</span>{' '}
+      <span class="status">{p.status}</span>
+    </span>
+  </a>
+</li>

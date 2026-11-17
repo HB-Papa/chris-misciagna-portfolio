@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import Cover from '../components/Cover.astro';
+import Spread from '../components/Spread.astro';
+import { person, statement, projects, backlist, resume } from '../data/site';
+---
+<Base>
+  <a class="skip" href="#work">Skip to the work</a>
+  <header class="mast" id="top">
+    <a class="name" href="#top">{person.name}</a>
+    <span class="line">{person.line}</span>
+    <nav aria-label="Main">
+      <a href="#work">Work</a><a href="#statement">Statement</a><a href="#backlist">More</a><a href="#resume">Résumé</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">{person.name}: portfolio</h1>
+    <ul class="shelf" id="work" aria-label="Featured projects">
+      {projects.map((p, i) => <Cover project={p} open={i === 0} />)}
+    </ul>
+
+    <section class="author" id="statement" aria-label="Statement">
+      <blockquote><p>{statement.quote} <span>{statement.accent}</span></p></blockquote>
+      <div class="cols"><p>{statement.body}</p></div>
+    </section>
+
+    {projects.map((p) => <Spread project={p} />)}
+
+    <section class="backlist" id="backlist" aria-labelledby="backlist-title">
+      <h2 id="backlist-title">Also from the MLIS</h2>
+      <ul>
+        {backlist.map((b) => (
+          <li>
+            <b>{b.title}</b><span>{b.note}</span>
+            <small>{b.href ? <a href={b.href}>{b.tag}</a> : b.tag}</small>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="resume" id="resume" aria-labelledby="resume-title">
+      <div class="head">
+        <h2 id="resume-title">Résumé</h2>
+        <p class="lede">{resume.lede}</p>
+      </div>
+      <div class="side">
+        <section aria-labelledby="edu-title">
+          <h3 id="edu-title">Education</h3>
+          <ul>{resume.education.map(([degree, where]) => <li><b>{degree}</b>{where}</li>)}</ul>
+        </section>
+        <section aria-labelledby="skills-title">
+          <h3 id="skills-title">Skills</h3>
+          <ul>{resume.skills.map((s) => <li>{s}</li>)}</ul>
+        </section>
+      </div>
+      <div class="jobs">
+        <h3>Experience</h3>
+        {resume.jobs.map((j) => (
+          <article class:list={['job', { lib: j.library }]}>
+            <p class="when">{j.when}</p>
+            <div>
+              <h4>{j.title}</h4>
+              <p class="org">{j.org}</p>
+              <ul>{j.points.map((pt) => <li>{pt}</li>)}</ul>
+              {j.project && <a class="go" href={`#${j.project}`}>See the project</a>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon" id="contact">
+    <h2>Write to me</h2>
+    <div>
+      <p>Open to academic library positions, and to conversations about open access and scholarly communication.</p>
+      <ul>
+        <li><a href={`mailto:${person.email}`}>{person.email}</a></li>
+        <li><a href={person.linkedin}>LinkedIn</a></li>
+      </ul>
+      <p class="fine">Set in Archivo and Source Serif 4. No tracking, no cookies.</p>
+    </div>
+  </footer>
+
+  <script is:inline src="/covers.js" type="module"></script>
+</Base>
