@@ -39,12 +39,10 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
 .intro { display: grid; grid-template-columns: 13rem minmax(0, 1fr); grid-template-areas: "label label" "photo text"; gap: 1rem clamp(1.5rem, 3vw, 3rem); padding: .25rem var(--gutter) clamp(1.75rem, 3vw, 2.5rem); }
 .intro-label { grid-area: label; display: flex; justify-content: space-between; gap: 1rem; font: 600 .85rem/1.2 var(--head); border-top: 2px solid var(--ink); padding-top: .5rem; }
 .portrait { grid-area: photo; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; display: block; background: #e9e4dc; }
-.intro-text { grid-area: text; align-self: end; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1rem clamp(1.5rem, 3vw, 3rem); align-items: end; }
+.intro-text { grid-area: text; align-self: end; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1rem clamp(1.5rem, 3vw, 3rem); align-items: center; }
 .intro h1 { font: 800 clamp(1.9rem, 3vw, 3.1rem)/1.03 var(--head); font-stretch: 84%; letter-spacing: -.02em; text-wrap: balance; }
 .intro-text p { max-width: 46ch; }
 .links .note { font-weight: 500; }
-.backlist small { display: flex; flex-direction: column; align-items: flex-end; gap: .35rem; }
-.backlist .pdf { font-weight: 700; }
 
 /* The shelf: faced-out covers */
 .shelf { display: flex; height: calc(100svh - 3.4rem); min-height: 560px; max-height: 1080px; list-style: none; padding: 0; }
@@ -91,16 +89,8 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
 .said blockquote { font: 400 italic clamp(1.3rem, 2vw, 1.6rem)/1.35 var(--read); }
 .said figcaption { font: 600 .95rem/1.4 var(--head); margin-top: .75rem; }
 
-/* Backlist */
-.backlist { padding: clamp(4rem, 8vw, 7rem) var(--gutter); background: var(--marigold); }
-.backlist h2, .resume h2, .colophon h2 { font: 800 clamp(2.4rem, 5vw, 5rem)/1 var(--head); font-stretch: 84%; letter-spacing: -.02em; }
-.backlist h2 { margin-bottom: 2.5rem; }
-.backlist ul { list-style: none; padding: 0; }
-.backlist li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: 1.5rem; border-top: 2px solid var(--ink); padding: .85rem 0; align-items: baseline; }
-.backlist b { font: 750 1.2rem/1.2 var(--head); }
-.backlist small { font: 600 .9rem var(--head); text-align: right; }
-
 /* Résumé */
+.resume h2, .colophon h2 { font: 800 clamp(2.4rem, 5vw, 5rem)/1 var(--head); font-stretch: 84%; letter-spacing: -.02em; }
 .resume { padding: clamp(4rem, 8vw, 7rem) var(--gutter); display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(2.5rem, 4vw, 4rem) 1.5rem; }
 .resume .head { grid-column: 1 / -1; }
 .resume .lede { font: 700 clamp(1.5rem, 3vw, 2.75rem)/1.08 var(--head); font-stretch: 88%; letter-spacing: -.012em; max-width: 27ch; margin-top: 1rem; text-wrap: balance; }
@@ -120,7 +110,6 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
 .job ul { padding-left: 1.1rem; font-size: 1.05rem; line-height: 1.5; max-width: 62ch; }
 .job li + li { margin-top: .4rem; }
 .job .go { font-size: .95rem; margin-top: 1rem; }
-.job.lib .when, .job.lib h4 { color: var(--pine); }
 
 /* Colophon */
 .colophon { background: var(--ink); color: var(--sheet); padding: clamp(3rem, 6vw, 5rem) var(--gutter); display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; font-family: var(--head); }
@@ -139,7 +128,6 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
   .mast .line { display: none; }
   .intro { grid-template-columns: 11rem minmax(0, 1fr); }
   .intro-text { grid-template-columns: 1fr; }
-  .backlist small { align-items: flex-start; flex-direction: row; gap: 1.25rem; }
 }
 @media (max-width: 700px) {
   .intro { grid-template-columns: 7.5rem minmax(0, 1fr); grid-template-areas: "label label" "photo text"; row-gap: 1rem; column-gap: 1.25rem; }
@@ -158,8 +146,6 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
   .author .cols p { grid-column: 1 / -1; }
   .spread { grid-template-columns: 1fr; min-height: 0; }
   .spread .left { min-height: 60vw; }
-  .backlist li { grid-template-columns: 1fr; gap: .35rem; }
-  .backlist small { text-align: left; }
   .colophon h2, .colophon div { grid-column: 1 / -1; }
   .side, .jobs { grid-column: 1 / -1; }
   .side { position: static; }
@@ -177,7 +163,7 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
 @media print {
   .skip, .mast nav, .shelf, .links, .job .go { display: none !important; }
   body { font-size: 11pt; }
-  .author, .spread .left, .backlist, .colophon { background: none !important; color: #000 !important; }
+  .author, .spread .left, .colophon { background: none !important; color: #000 !important; }
   .author blockquote span { color: #000; }
   .spread, .resume, .author { break-inside: avoid-page; min-height: 0; }
   .side { position: static; }

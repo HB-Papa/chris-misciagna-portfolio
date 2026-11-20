@@ -4,7 +4,7 @@ import Cover from '../components/Cover.astro';
 import Spread from '../components/Spread.astro';
 import { Image } from 'astro:assets';
 import headshot from '../assets/headshot.jpg';
-import { person, intro, statement, projects, backlist, resume } from '../data/site';
+import { person, intro, statement, projects, resume } from '../data/site';
 ---
 <Base>
   <a class="skip" href="#work">Skip to the work</a>
@@ -12,7 +12,7 @@ import { person, intro, statement, projects, backlist, resume } from '../data/si
     <a class="name" href="#top">{person.name}</a>
     <span class="line">{person.line}</span>
     <nav aria-label="Main">
-      <a href="#work">Work</a><a href="#statement">Statement</a><a href="#backlist">More</a><a href="#resume">Résumé</a><a href="#contact">Contact</a>
+      <a href="#work">Work</a><a href="#statement">Statement</a><a href="#resume">Résumé</a><a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -20,7 +20,7 @@ import { person, intro, statement, projects, backlist, resume } from '../data/si
     <section class="intro" aria-labelledby="intro-title">
       <p class="intro-label"><span>About the author</span><span>MLIS, University of South Carolina</span></p>
       <Image class="portrait" src={headshot} alt={intro.photoAlt} widths={[240, 400, 560, 800]}
-        sizes="(max-width: 700px) 9.5rem, (max-width: 1000px) 14rem, 18rem" loading="eager" fetchpriority="high" />
+        sizes="(max-width: 700px) 7.5rem, (max-width: 1000px) 11rem, 13rem" loading="eager" fetchpriority="high" />
       <div class="intro-text">
         <h1 id="intro-title">{intro.lede}</h1>
         {intro.body.map((p) => <p>{p}</p>)}
@@ -37,21 +37,6 @@ import { person, intro, statement, projects, backlist, resume } from '../data/si
     </section>
 
     {projects.map((p) => <Spread project={p} />)}
-
-    <section class="backlist" id="backlist" aria-labelledby="backlist-title">
-      <h2 id="backlist-title">Also from the MLIS</h2>
-      <ul>
-        {backlist.map((b) => (
-          <li>
-            <b>{b.title}</b><span>{b.note}</span>
-            <small>
-              {b.href ? <a href={b.href}>{b.tag}</a> : b.tag}
-              {b.pdf && <a class="pdf" href={b.pdf}>Read it<span class="visually-hidden">: {b.title}</span> (PDF)</a>}
-            </small>
-          </li>
-        ))}
-      </ul>
-    </section>
 
     <section class="resume" id="resume" aria-labelledby="resume-title">
       <div class="head">
@@ -71,7 +56,7 @@ import { person, intro, statement, projects, backlist, resume } from '../data/si
       <div class="jobs">
         <h3>Experience</h3>
         {resume.jobs.map((j) => (
-          <article class:list={['job', { lib: j.library }]}>
+          <article class="job">
             <p class="when">{j.when}</p>
             <div>
               <h4>{j.title}</h4>
