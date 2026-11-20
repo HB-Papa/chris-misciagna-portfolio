@@ -168,7 +168,10 @@ export const projects: Project[] = [
       text: 'Chris has significant work experience that he reflected in his internship experience. He possesses a strong sense of responsibility and aspires to excellence.',
       source: 'Glenn Bunton, internship supervisor, University of South Carolina Libraries',
     },
-    links: [],
+    links: [
+      { label: 'See Power BI 101', href: '/work/misciagna-power-bi-101-slides.pdf', note: 'PDF, 11 slides' },
+      { label: 'See Power BI 102', href: '/work/misciagna-power-bi-102-slides.pdf', note: 'PDF, 13 slides' },
+    ],
   },
   {
     id: 'uconn-policy',
