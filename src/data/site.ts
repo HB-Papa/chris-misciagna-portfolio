@@ -3,7 +3,7 @@
 // and no phone number, home address, student ID, or transcript ever appears on the site.
 
 export type Fact = [label: string, value: string];
-export type Link = { label: string; href: string };
+export type Link = { label: string; href: string; note?: string };
 export type Art = 'sun' | 'observatory' | 'third' | 'training' | 'shelf';
 
 export interface Project {
@@ -34,10 +34,9 @@ export const person = {
 };
 
 export const intro = {
-  lede: "I'm Chris Misciagna, an aspiring academic librarian with interests in open access and scholarly communication.",
+  lede: "Welcome! My name is Chris Misciagna, and I'm an aspiring academic librarian with interests in open access and scholarly communication.",
   body: [
-    'This site collects my work from the MLIS at the University of South Carolina and since: two open access projects I built and maintain, a research design, an internship at Thomas Cooper Library, and a collection development policy. Each cover below opens to what the project is and the thinking behind it.',
-    "What draws me to librarianship is the work of making research reachable: open access, scholarly communication, and the instruction that helps people use both. Further down you'll find my statement, more course work, and my résumé.",
+    'Below are graduate work samples from my MLIS program, and some side projects that I built and maintain. Thanks for taking a look and I hope we can work together soon.',
   ],
   photoAlt: 'Chris Misciagna, smiling, in a brown sweater against a plain light background.',
 };
@@ -59,7 +58,7 @@ export const projects: Project[] = [
     long: true,
     art: 'observatory',
     blurb: 'How much research from 17 Connecticut colleges and universities can anyone read for free? About two-thirds of 176,198 articles, 2015 to 2025.',
-    status: 'Built and running, in progress',
+    status: 'Built and running',
     facts: [
       ['Institutions', '17 colleges and universities'],
       ['Articles', '176,198, from 2015 to 2025'],
@@ -109,7 +108,7 @@ export const projects: Project[] = [
         body: "Graduate students have a different campus life from undergraduates, and many academic libraries underserve them. Designing the survey took about as long as writing the paper. Refining it to 20 questions taught me to focus on what matters rather than measuring everything possible. I'd like to run this study as a practicing librarian.",
       },
     ],
-    links: [],
+    links: [{ label: 'Read the methodology', href: '/work/misciagna-libraries-as-third-place-methodology.pdf', note: 'PDF, 17 pages' }],
   },
   {
     id: 'open-sun',
@@ -195,17 +194,17 @@ export const projects: Project[] = [
         body: 'I worked from public information about the library and stated plainly where I made assumptions about budget and collection data, so the framework could be adapted to real figures. UConn did not commission or adopt it.',
       },
     ],
-    links: [],
+    links: [{ label: 'Read the policy', href: '/work/misciagna-homer-babbidge-collection-development-policy.pdf', note: 'PDF, 10 pages' }],
   },
 ];
 
-export const backlist: { title: string; note: string; tag: string; href?: string }[] = [
-  { title: 'Teaching Librarians to Teach Open', note: 'A two-year, $246,460 grant proposal for OER training in academic libraries. A course assignment, not a funded grant.', tag: 'ISCI 704' },
+export const backlist: { title: string; note: string; tag: string; href?: string; pdf?: string }[] = [
+  { title: 'Teaching Librarians to Teach Open', note: 'A two-year, $246,460 grant proposal for OER training in academic libraries. A course assignment, not a funded grant.', tag: 'ISCI 704', pdf: '/work/misciagna-oer-grant-proposal-narrative.pdf' },
   { title: 'Crisis Communication & Market Research', note: 'A subject LibGuide bridging two fields that rarely meet in library settings.', tag: 'LibGuide', href: 'https://sclis.libguides.com/c.php?g=1413293&p=10468285' },
-  { title: 'Evaluating Open Library', note: 'How search infrastructure shapes experience, compared with Google Books, WorldCat, and LC.', tag: 'ISCI 706' },
-  { title: 'Librarian Scholarship & Tenure', note: 'Tenure criteria compared at Penn State and Washington State.', tag: 'ISCI 729' },
+  { title: 'Evaluating Open Library', note: 'How search infrastructure shapes experience, compared with Google Books, WorldCat, and LC.', tag: 'ISCI 706', pdf: '/work/misciagna-evaluating-open-library.pdf' },
+  { title: 'Librarian Scholarship & Tenure', note: 'Tenure criteria compared at Penn State and Washington State.', tag: 'ISCI 729', pdf: '/work/misciagna-librarian-scholarship-and-tenure.pdf' },
   { title: 'World Happiness in R', note: "156 countries, and what purely economic explanations can't capture.", tag: 'ISCI 709' },
-  { title: 'A Legacy of Innovation & Democracy', note: 'A mini zine on Dr. Carla Hayden.', tag: 'ISCI 752' },
+  { title: 'A Legacy of Innovation & Democracy', note: 'A mini zine on Dr. Carla Hayden, laid out to print and fold.', tag: 'ISCI 752', pdf: '/work/misciagna-carla-hayden-zine.pdf' },
 ];
 
 export const resume = {

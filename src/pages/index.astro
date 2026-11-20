@@ -44,7 +44,10 @@ import { person, intro, statement, projects, backlist, resume } from '../data/si
         {backlist.map((b) => (
           <li>
             <b>{b.title}</b><span>{b.note}</span>
-            <small>{b.href ? <a href={b.href}>{b.tag}</a> : b.tag}</small>
+            <small>
+              {b.href ? <a href={b.href}>{b.tag}</a> : b.tag}
+              {b.pdf && <a class="pdf" href={b.pdf}>Read it<span class="visually-hidden">: {b.title}</span> (PDF)</a>}
+            </small>
           </li>
         ))}
       </ul>

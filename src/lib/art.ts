@@ -30,7 +30,7 @@ function observatory() {
   return { viewBox: '0 0 400 400', body: out };
 }
 
-/** Third Place: 300 survey invitations across five universities, 75 filled at the expected 25% response. */
+/** Third Place: 1,200 survey invitations across five universities, one dot per four. The 75 filled dots are the 300 expected responses (25%). */
 function third() {
   let out = '';
   let n = 0;

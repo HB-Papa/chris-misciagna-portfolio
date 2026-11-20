@@ -22,7 +22,7 @@ const headingId = `${p.id}-title`;
       </figure>
     )}
     {p.links.length > 0 && (
-      <p class="links">{p.links.map((l) => <a class="go" href={l.href}>{l.label}</a>)}</p>
+      <p class="links">{p.links.map((l) => <a class="go" href={l.href}>{l.label}{l.note && <span class="note"> ({l.note})</span>}</a>)}</p>
     )}
   </div>
 </article>
