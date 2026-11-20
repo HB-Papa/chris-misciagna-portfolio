@@ -46,20 +46,18 @@ This loads the site in Microsoft Edge at desktop and phone widths. It runs an ax
 
 ## Publish it
 
-This folder is linked to the Vercel project `chris-misciagna-portfolio` (team hb-papa). It isn't live yet.
+The site is live at **https://chrismisciagna.com**. It's hosted on Vercel in the project `chris-misciagna-portfolio` (team hb-papa), and the code is on GitHub at HB-Papa/chris-misciagna-portfolio.
 
-- **Private preview** (signed-in Vercel team members only):
+- **Publish a change:** push to the `main` branch. Vercel builds it and updates the live site in about a minute.
+- **Try a change privately first:** push to any other branch. Vercel builds a private preview that only signed-in team members can open, and leaves the live site alone.
 
-  ```bash
-  vercel deploy
-  ```
+**Domain:** chrismisciagna.com is registered through Canva, which also runs its DNS. In Canva, under Web domains, then chrismisciagna.com, then Advanced settings, "Connected to Canva" is switched off and there are two DNS records:
 
-- **Go live** (only once the site is approved):
+| Type | Name/Host | Value |
+|---|---|---|
+| A | `@` | `216.198.79.1` |
+| CNAME | `www` | `300d10915b84a332.vercel-dns-017.com` |
 
-  ```bash
-  vercel deploy --prod
-  ```
+Keep the domain's renewal active in Canva, or the address stops working.
 
-  This makes chris-misciagna-portfolio.vercel.app public. Point chrismisciagna.com at it in the project's Domains settings.
-
-`vercel.json` sets security headers that allow no outside scripts, fonts, or tracking. The first deploy on 2026-11-16 became production automatically, so its public address was removed with `vercel alias rm` to keep the site private until launch.
+`vercel.json` sets security headers that allow no outside scripts, fonts, or tracking.
