@@ -19,7 +19,7 @@ function sun() {
 }
 
 /** Observatory: one bar per institution, filled to its share of articles free to read (2015 to 2025). */
-const freeShares = [0.781, 0.71, 0.68, 0.619, 0.605, 0.6, 0.599, 0.544, 0.534, 0.528, 0.521, 0.509, 0.505, 0.502, 0.49, 0.476, 0.442];
+const freeShares = [0.783, 0.715, 0.684, 0.619, 0.609, 0.603, 0.599, 0.545, 0.541, 0.528, 0.527, 0.521, 0.51, 0.505, 0.49, 0.476, 0.442];
 function observatory() {
   const out = freeShares
     .map((f, i) => {

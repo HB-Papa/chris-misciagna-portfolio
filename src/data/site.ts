@@ -57,26 +57,27 @@ export const projects: Project[] = [
     title: 'Connecticut Open Access Observatory',
     long: true,
     art: 'observatory',
-    blurb: 'How much research from 17 Connecticut colleges and universities can anyone read for free? About two-thirds of 176,198 articles, 2015 to 2025.',
+    blurb: 'How much research from 17 Connecticut colleges and universities can anyone read for free? About two-thirds of 174,990 articles, 2015 to 2025.',
     status: 'Built and running',
     facts: [
-      ['Institutions', '17 colleges and universities'],
-      ['Articles', '176,198, from 2015 to 2025'],
-      ['Free to read', '66.8%, or 59.2% without Yale'],
+      ['Institutions', '17, each with its own profile'],
+      ['Articles', '174,990, from 2015 to 2025'],
+      ['Free to read', '67.3%, or 59.6% without Yale'],
+      ['Updates', 'Monthly, with automatic quality checks'],
       ['Data', 'OpenAlex, released as CC0'],
     ],
     sections: [
       {
         heading: 'What it is',
-        body: "A public report on how much of the research published by Connecticut's colleges and universities anyone can read for free, and how much is still behind a paywall. A Python pipeline pulls records from the open database OpenAlex, checks them, and computes every figure. The site pairs each chart with a written summary and a data table, and has no tracking. The code and data are openly licensed, so anyone can check the numbers or reuse them.",
+        body: "A public report on how much of the research published by Connecticut's colleges and universities anyone can read for free, and how much is still behind a paywall. It has a statewide overview, a profile for each of the 17 institutions, side-by-side comparisons, a methods page, and every dataset available to download. Each chart comes with a written summary and a data table, and the site has no tracking.",
       },
       {
         heading: 'Why I made it',
-        body: 'Open Sun let me run an open collection. This asks the question a scholarly communication librarian faces on campus: how open is our own research, where are the paywalls, and what are authors paying to publish? I wrote down every methodological choice, with the alternatives and my reasons, because a number like this is only useful if a skeptical reader can follow how it was made.',
+        body: 'It answers the questions a scholarly communication librarian faces on campus: how open is our own research, where are the paywalls, and what are authors paying to publish? I wrote down every methodological choice, with the alternatives and my reasons, because a number like this is only useful if a skeptical reader can follow how it was made.',
       },
       {
         heading: 'How it was built',
-        body: "Built with AI coding tools; I set the research questions and approved each methodological decision. A separate recomputation checks the key figures. It's still in progress: the statewide overview and the UConn profile are live, and the other institution profiles and a methods page are next.",
+        body: 'Built with AI coding tools; I set the research questions and approved each methodological decision. A Python pipeline pulls records from the open database OpenAlex, checks them, and computes every figure, and a separate recomputation verifies the key numbers. The data refreshes every month and is published only when its quality checks pass. The code and data are openly licensed, so anyone can check the numbers or reuse them.',
       },
     ],
     links: [

@@ -20,7 +20,7 @@ import { person, intro, statement, projects, resume } from '../data/site';
     <section class="intro" aria-labelledby="intro-title">
       <p class="intro-label"><span>About the author</span><span>MLIS, University of South Carolina</span></p>
       <Image class="portrait" src={headshot} alt={intro.photoAlt} widths={[240, 400, 560, 800]}
-        sizes="(max-width: 700px) 9.5rem, (max-width: 1000px) 13rem, 16.5rem" loading="eager" fetchpriority="high" />
+        sizes="(max-width: 700px) 10.5rem, (max-width: 1000px) 15.5rem, 20rem" loading="eager" fetchpriority="high" />
       <div class="intro-text">
         <h1 id="intro-title">{intro.lede}</h1>
         {intro.body.map((p) => <p>{p}</p>)}
