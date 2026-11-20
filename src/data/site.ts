@@ -33,11 +33,20 @@ export const person = {
     'Portfolio of Chris Misciagna, MLIS: open access projects, library research, and academic library work, from Open Sun to the Connecticut Open Access Observatory.',
 };
 
+export const intro = {
+  lede: "I'm Chris Misciagna, an aspiring academic librarian with interests in open access and scholarly communication.",
+  body: [
+    'This site collects my work from the MLIS at the University of South Carolina and since: two open access projects I built and maintain, a research design, an internship at Thomas Cooper Library, and a collection development policy. Each cover below opens to what the project is and the thinking behind it.',
+    "What draws me to librarianship is the work of making research reachable: open access, scholarly communication, and the instruction that helps people use both. Further down you'll find my statement, more course work, and my résumé.",
+  ],
+  photoAlt: 'Chris Misciagna, smiling, in a brown sweater against a plain light background.',
+};
+
 export const statement = {
   quote: 'Scholarship and research are not commodities reserved for the privileged, but resources available to all learners',
   accent: 'regardless of income or zip code.',
   body:
-    "My career so far has been in ad research. I'm a Supervisor of Measurement at Publicis Media, and for more than four years before that I worked at Comscore, teaching clients across the country how to use advanced research software. I learned that instruction comes down to understanding what someone needs and leaving them able to do it alone. I hold an MLIS and a Certificate in Academic Libraries from the University of South Carolina, and I want to bring that experience to an academic library on the tenure track: open educational resources, publishing support for faculty, and library research of my own.",
+    "My career so far has been in ad research. I'm a Supervisor of Measurement at Publicis Media, and for more than four years before that I worked at Comscore, teaching clients across the country how to use advanced research software. I learned that instruction comes down to understanding what someone needs and leaving them able to do it alone. I hold an MLIS and a Graduate Certificate in Academic Libraries from the University of South Carolina, and I want to bring that experience to an academic library on the tenure track: open educational resources, publishing support for faculty, and library research of my own.",
 };
 
 export const projects: Project[] = [
@@ -203,7 +212,7 @@ export const resume = {
   lede: 'Ad research by trade, with over 1,000 hours of client instruction on specialized research platforms.',
   education: [
     ['Master’s, Library and Information Science', 'University of South Carolina, Dec. 2025'],
-    ['Certificate, Academic Libraries', 'University of South Carolina, Dec. 2025'],
+    ['Graduate Certificate, Academic Libraries', 'University of South Carolina, Dec. 2025'],
     ['Bachelor of Arts, Public Relations', 'Quinnipiac University, May 2020'],
     ['Certificate, Legal Studies', 'Quinnipiac University, May 2020'],
   ] as [string, string][],
