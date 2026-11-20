@@ -36,10 +36,10 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
 .mast nav a:hover { text-decoration: underline; }
 
 /* Intro: the author's photo and a short note, like the inside flap of a book */
-.intro { display: grid; grid-template-columns: 13rem minmax(0, 1fr); grid-template-areas: "label label" "photo text"; gap: 1rem clamp(1.5rem, 3vw, 3rem); padding: .25rem var(--gutter) clamp(1.75rem, 3vw, 2.5rem); }
+.intro { display: grid; grid-template-columns: 16.5rem minmax(0, 1fr); grid-template-areas: "label label" "photo text"; gap: 1rem clamp(1.5rem, 3vw, 3rem); padding: .25rem var(--gutter) clamp(1.75rem, 3vw, 2.5rem); }
 .intro-label { grid-area: label; display: flex; justify-content: space-between; gap: 1rem; font: 600 .85rem/1.2 var(--head); border-top: 2px solid var(--ink); padding-top: .5rem; }
-.portrait { grid-area: photo; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; display: block; background: #e9e4dc; }
-.intro-text { grid-area: text; align-self: end; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1rem clamp(1.5rem, 3vw, 3rem); align-items: center; }
+.portrait { grid-area: photo; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; display: block; background: #e9e4dc; padding: 6px; background-clip: content-box; border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); border-radius: 6px; box-shadow: 0 1px 2px rgb(17 18 20 / .06), 0 6px 18px -8px rgb(17 18 20 / .18); }
+.intro-text { grid-area: text; align-self: center; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1rem clamp(1.5rem, 3vw, 3rem); align-items: center; }
 .intro h1 { font: 800 clamp(1.9rem, 3vw, 3.1rem)/1.03 var(--head); font-stretch: 84%; letter-spacing: -.02em; text-wrap: balance; }
 .intro-text p { max-width: 46ch; }
 .links .note { font-weight: 500; }
@@ -126,11 +126,11 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
   .cover .num span:last-child, .cover:not(.on) .num span:last-child { display: inline; }
   .mast { flex-wrap: wrap; }
   .mast .line { display: none; }
-  .intro { grid-template-columns: 11rem minmax(0, 1fr); }
+  .intro { grid-template-columns: 13rem minmax(0, 1fr); }
   .intro-text { grid-template-columns: 1fr; }
 }
 @media (max-width: 700px) {
-  .intro { grid-template-columns: 7.5rem minmax(0, 1fr); grid-template-areas: "label label" "photo text"; row-gap: 1rem; column-gap: 1.25rem; }
+  .intro { grid-template-columns: 9.5rem minmax(0, 1fr); grid-template-areas: "label label" "photo text"; row-gap: 1rem; column-gap: 1.25rem; }
   .intro h1 { font-size: clamp(1.35rem, 5.6vw, 1.9rem); }
   .intro-text { display: contents; }
   .intro-text h1 { grid-area: text; align-self: center; }
