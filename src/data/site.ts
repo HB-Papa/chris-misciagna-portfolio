@@ -36,7 +36,7 @@ export const person = {
 export const intro = {
   lede: "Welcome! My name is Chris Misciagna, and I'm an aspiring academic librarian with interests in open access and scholarly communication.",
   body: [
-    'Below are graduate work samples from my MLIS program, and some side projects that I built and maintain. Thanks for taking a look and I hope we can work together soon.',
+    'Below are graduate work samples from my MLIS program, along with some side projects that I built and maintain. Thanks for taking a look and I hope we can work together soon.',
   ],
   photoAlt: 'Chris Misciagna, smiling, in a brown sweater against a plain light background.',
 };
@@ -45,7 +45,7 @@ export const statement = {
   quote: 'Scholarship and research are not commodities reserved for the privileged, but resources available to all learners',
   accent: 'regardless of income or zip code.',
   body:
-    "My career so far has been in ad research. I'm a Supervisor of Measurement at Publicis Media, and for more than four years before that I worked at Comscore, teaching clients across the country how to use advanced research software. I learned that instruction comes down to understanding what someone needs and leaving them able to do it alone. I hold an MLIS and a Graduate Certificate in Academic Libraries from the University of South Carolina, and I want to bring that experience to an academic library on the tenure track: open educational resources, publishing support for faculty, and library research of my own.",
+    "As a future academic librarian, I will encourage the use of open educational resources, support faculty in navigating their publishing concerns, and position the academic library as an active participant in democratizing scholarly information. Through years of client-facing work in the media measurement industry, I’ve spent thousands of hours making complex data and technical systems easy to understand. I have extensive experience in face-to-face instruction, teaching clients across the country how to leverage advanced software for their own research. As I transition into academic librarianship, I bring a user-centered approach to supporting students, faculty, and researchers as they navigate an increasingly complex information landscape. I am committed to building library services that not only provide access to information, but also teach users how to engage with it critically.",
 };
 
 export const projects: Project[] = [
@@ -69,11 +69,11 @@ export const projects: Project[] = [
     sections: [
       {
         heading: 'What it is',
-        body: "A public report on how much of the research published by Connecticut's colleges and universities anyone can read for free, and how much is still behind a paywall. It has a statewide overview, a profile for each of the 17 institutions, side-by-side comparisons, a methods page, and every dataset available to download. Each chart comes with a written summary and a data table, and the site has no tracking.",
+        body: "A public report on how much of the research published by Connecticut's colleges and universities anyone can read for free, and how much is still behind a paywall. It has a statewide overview, a profile for each of the featured universities, side-by-side comparisons, a methods page, and every dataset available to download.",
       },
       {
         heading: 'Why I made it',
-        body: 'It answers the questions a scholarly communication librarian faces on campus: how open is our own research, where are the paywalls, and what are authors paying to publish? I wrote down every methodological choice, with the alternatives and my reasons, because a number like this is only useful if a skeptical reader can follow how it was made.',
+        body: "I made the Observatory to explore how equitable access to published scholarship is in Connecticut, and how much of the research produced at the state's colleges and universities is truly open to everyone. I also wanted to put my evolving technical skills to work building a free resource that academic libraries can use to track their open access publishing over time.",
       },
       {
         heading: 'How it was built',
@@ -103,11 +103,11 @@ export const projects: Project[] = [
     sections: [
       {
         heading: 'What it is',
-        body: 'A full research proposal: a literature review on third places and graduate students, two research questions with working and null hypotheses, and a mixed-methods survey using stratified random sampling across disciplines and degree levels. It plans statistical tests and content analysis of open responses, and says how the findings would be shared, from library journals and the ACRL conference to the administrators who plan library spaces.',
+        body: "An investigation into how academic libraries can serve as third places for graduate students. I designed a quantitative study with qualitative components to examine how redefining academic libraries as third places would influence graduate students' use of library spaces and resources. The methodology uses stratified random sampling across academic disciplines and degree levels, targets 300 graduate students across five research universities, and provides a 20-question survey instrument that combines Likert-scale items with open-ended questions. This proposal demonstrates my ability to design research that addresses gaps in understanding in the library science field.",
       },
       {
         heading: 'Why it matters to me',
-        body: "Graduate students have a different campus life from undergraduates, and many academic libraries underserve them. Designing the survey took about as long as writing the paper. Refining it to 20 questions taught me to focus on what matters rather than measuring everything possible. I'd like to run this study as a practicing librarian.",
+        body: "Libraries need to tailor their services and be adaptable to meet their patrons' needs. Graduate students have different experiences on campus than their undergraduate peers, and they would benefit from more targeted programming and space utilization. Graduate students represent an underserved population in many academic libraries, and research examining their unique needs can inform redesigns of space, service development, and resource allocation decisions that improve their educational experiences.",
       },
     ],
     links: [{ label: 'Read the proposal', href: '/work/misciagna-libraries-as-third-place-research-proposal.pdf', note: 'PDF, 29 pages' }],
@@ -131,11 +131,11 @@ export const projects: Project[] = [
     sections: [
       {
         heading: 'What it is',
-        body: 'A public library for one subject, where everything is free to read. Readers can search and filter by topic, type, year, and language, cite any item in APA or Chicago, follow short guided pathways, and look up ideas in a field guide. New arrivals have their own page and RSS feed, and anyone can suggest a resource. A three-minute daily puzzle, Microgrid, gives people a reason to come back.',
+        body: 'A free library of open access writing on solarpunk, a movement that imagines a future powered by the sun, woven into living ecosystems, and built around community. The collection gathers scholarship, essays, fiction, and practical guides on solarpunk and the ideas around it, from energy justice and community solar to the commons and hopeful futures, and every item is free to read. Readers can search and filter by topic, type, year, and language, cite any item in APA or Chicago, follow guided reading pathways, and look up ideas in a field guide.',
       },
       {
         heading: 'Why I made it',
-        body: "I've spent this degree arguing that open systems can provide large amounts of freely accessible information when they're properly structured and maintained. Open Sun is me testing that claim by running one: selecting, describing, and maintaining a collection in public.",
+        body: "Solarpunk is a topic I find genuinely interesting, and I wanted information about it to be easy for anyone to find and read. Open Sun gathers that writing in one place, with no paywalls and no account needed. I also built Microgrid, a three-minute daily puzzle about keeping a solar neighborhood lit, to give visitors a reason to keep coming back to the site.",
       },
       {
         heading: 'How it was built',
@@ -208,7 +208,7 @@ export const projects: Project[] = [
 
 
 export const resume = {
-  lede: 'Ad research by trade, with over 1,000 hours of client instruction on specialized research platforms.',
+  lede: 'Media research professional with over 1,000 hours of client instruction on specialized research platforms.',
   education: [
     ['Master’s, Library and Information Science', 'University of South Carolina, Dec. 2025'],
     ['Graduate Certificate, Academic Libraries', 'University of South Carolina, Dec. 2025'],
