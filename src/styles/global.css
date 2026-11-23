@@ -89,7 +89,7 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
 .said blockquote { font: 400 italic clamp(1.3rem, 2vw, 1.6rem)/1.35 var(--read); }
 .said figcaption { font: 600 .95rem/1.4 var(--head); margin-top: .75rem; }
 
-/* Résumé */
+/* Resume */
 .resume h2, .colophon h2 { font: 800 clamp(2.4rem, 5vw, 5rem)/1 var(--head); font-stretch: 84%; letter-spacing: -.02em; }
 .resume { padding: clamp(4rem, 8vw, 7rem) var(--gutter); display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(2.5rem, 4vw, 4rem) 1.5rem; }
 .resume .head { grid-column: 1 / -1; }
@@ -159,7 +159,7 @@ a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1.5p
   html { scroll-behavior: auto; }
 }
 
-/* Print: the résumé and project pages on plain paper. */
+/* Print: the resume and project pages on plain paper. */
 @media print {
   .skip, .mast nav, .shelf, .links, .job .go { display: none !important; }
   body { font-size: 11pt; }

@@ -6,7 +6,7 @@ A static site built with [Astro](https://astro.build). No database, no tracking,
 
 ## Change the words
 
-Everything a visitor reads is in **`src/data/site.ts`**: the statement, the five featured projects, the "Also from the MLIS" list, the résumé, and the contact details. Edit the text there and rebuild. You shouldn't need to touch any other file to update content.
+Everything a visitor reads is in **`src/data/site.ts`**: the statement, the five featured projects, the resume, and the contact details. Edit the text there and rebuild. You shouldn't need to touch any other file to update content.
 
 - **To feature a different project,** replace one entry in `projects`. Give it a `color` (marigold, ultra, vermilion, pine, or ink) and an `art` drawing from `src/lib/art.ts`. A new project needs a new drawing there, ideally one that shows a real fact about it.
 - **To add a document link** (a paper, a policy), put the file in `public/` and add `{ label: 'Read the policy', href: '/the-file.pdf' }` to that project's `links`.
